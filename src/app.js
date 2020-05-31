@@ -21,12 +21,10 @@ hbs.registerPartials(hbsPartialsPath)
 const pubDirPath = path.join(__dirname, '../public')
 app.use(express.static(pubDirPath))
 
-
-
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Home',
-        name: 'Mark Bolton',
+        title: 'Weather Home',
+        name: 'Micky Dee',
         temp: 28
     })
 })
@@ -34,7 +32,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About',
-        name: 'Mark Bolton',
+        name: 'Micky Dee',
         temp: 28
     })
 })
@@ -42,8 +40,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        name: 'Mark Bolton',
-        msg: 'You have stuffed up, get lost'
+        name: 'Micky Dee',
+        msg: 'You need help :)'
     })
 })
 
